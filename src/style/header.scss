@@ -1,0 +1,29 @@
+$BackColor: #222235;
+
+$ColorLink: #fff;
+
+@mixin flexHeaderColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin flexHeaderRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.HeaderWrap {
+  padding: 2vw;
+  background: $BackColor;
+  &__list {
+    @include flexHeaderRow();
+  }
+  &__innerWrapList {
+    gap: 2vw;
+    @include flexHeaderRow();
+  }
+  &__listItem > a {
+    color: $ColorLink;
+  }
+}
